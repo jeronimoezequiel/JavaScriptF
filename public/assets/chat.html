@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseApp = firebase.initializeApp({
+        apiKey: "AIzaSyAjk5cmy0eErrQQldtx6RpUvrVS0j3bm-o",
+        authDomain: "javascriptf-3bf0a.firebaseapp.com",
+        databaseURL: "https://javascriptf-3bf0a-default-rtdb.firebaseio.com/",
+        projectId: "javascriptf-3bf0a",
+        storageBucket: "javascriptf-3bf0a.appspot.com",
+        messagingSenderId: "28812649159",
+        appId: "1:28812649159:web:a4ed615cb4e7665cc4d4e2"
+        }); 
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+    </script>
+</head>
+<body>    
+        <div class="container">
+            <nav class="navbar navbar-dark bg-dark">
+                <span class="navbar-brand" id="nombreUsuario">Chat</span>
+                <div id="botones"></div>
+            </nav>
+
+            <main id="contenidoProtegido" class="mt-3" style="height: 75vh; overflow-y: scroll;"></main>
+
+            <form id="formulario">
+                <input type="text" class="form-control" placeholder="Enviar mensaje" id="inputChat">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>  
